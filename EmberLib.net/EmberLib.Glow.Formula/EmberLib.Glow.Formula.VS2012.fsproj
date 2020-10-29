@@ -115,23 +115,20 @@
     <None Include="..\BerLib\Properties\EmberLib.snk">
       <Link>EmberLib.snk</Link>
     </None>
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <Private>True</Private>
+    <Reference Include="FSharp.Core">
+      <HintPath>..\packages\FSharp.Core.4.1.18\lib\net20\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FSharp.PowerPack">
+      <HintPath>..\packages\FSPowerPack.Core.Community.3.0.0.0\Lib\Net20\FSharp.PowerPack.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\EmberLib.Glow\EmberLib.Glow.csproj">
       <Name>EmberLib.Glow</Name>
       <Project>{71ef1e5c-4ca1-4c44-a091-0ca9f7609dac}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\EmberLib.Portable\FSharp.PowerPack.PCL\FSharp.PowerPack.PCL.fsproj">
-      <Name>FSharp.PowerPack.PCL</Name>
-      <Project>{3beb9ccd-64f0-4932-a1b3-8ee89a0df785}</Project>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
